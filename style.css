@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    max-height: 500vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+
+.todo{
+    width: 100%;
+    max-width: 550px;
+    background-color: white;
+    margin: 100px auto 50px;
+    padding-bottom: 40px;
+    border-radius: 0.6em;
+}
+
+.head{
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.head h1{
+    font-size: 25px;
+    color: #002765;
+}
+
+.head img{
+    height: 25px;
+}
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 42px 20px 42px;
+    background-color: #edeef0;
+    border-radius: 1.4em;
+}
+
+#input{
+    flex: 1;
+    height: 52px;
+    border: none;
+    outline: none;
+    padding-left: 39px;
+    background: transparent;
+
+}
+
+#add{
+    height: 52px;
+    width: 136px;
+    border-radius: 1.8em;
+    border: none;
+    outline: none;
+    background-color: #ff5945;
+    color: #fff;
+    cursor: pointer;
+}
+
+#add:hover{
+    background-color: blue;
+}
+
+.list{
+    padding-left: 62px;
+    padding-top: 20px;
+}
+
+.list li{
+    list-style-type: none;
+    padding: 16px;
+    position: relative;
+    user-select: none;
+}
+
+.list li::before{
+    background-image: url(images/unchecked.png);
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-position: center;
+    top: 13px;
+    left: -29px;
+}
+
+.checked{
+    text-decoration: line-through;
+    text-decoration-color: #555;
+}
+
+ul .checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul span{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+li span:hover{
+    background-color: #edeef0;
+    border-radius: 50px;
+}
+
+#delete{
+    position: absolute;
+    right: 33px;
+    height: 30px;
+    width: 80px;
+    border-radius: 1.2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(245, 96, 96);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
